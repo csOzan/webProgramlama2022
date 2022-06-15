@@ -1,0 +1,150 @@
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title></title>
+
+    <!-- Bootstrap -->
+    <link href="resources/css/bootstrap.min.css" rel="stylesheet">
+ 	 <!--  Data Table Search and Sort Css Plugin -->
+    <link href="resources/css/dataTables.bootstrap.min.css" rel="stylesheet">
+	
+	<!-- Awesome Font -->
+    <link href="resources/css/font-awesome.min.css" rel="stylesheet">
+	
+    <!-- Side Nav Style -->
+    <link href="resources/css/sidenav.css" rel="stylesheet">
+    
+    <!-- Custom Style -->
+    <link href="resources/css/tgstyles.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+	<!--   Complete Page -->
+    <div id="wrapper">
+    <%@ include file="admin-sidenav.jsp" %>
+	<!-- Page Contant Wrapper -->
+    	<div id="page-content-wrapper">
+    	
+    	<%@ include file="admin-topnav.jsp" %>
+    	<!-- Page Header -->
+    			<div class="container-fluid">
+    				<div class="row">
+    					<h1 class="page-header">Dashboard</h1>
+    				</div>
+    				
+    				<div class="col-lg-6">
+    				<div class="ibox">
+                    	<div class="ibox-title">
+                                    <h5>Products List </h5> 
+                        </div>
+                        <div class="ibox-content">
+                                   <div>
+                                       <div class="table-responsive">
+										    <table class="table table-bordered table-hover">
+										      <thead>
+										        <tr>
+										          <th>#</th>
+										          <th>Product Id</th>
+										          <th>Product Name</th>
+										          <th>Product Description</th>
+										          <th>Is Available</th>
+										          <th>Options</th>
+										        </tr>
+										      </thead>
+										       <% int i = 1; %> 
+										      <tbody>
+										       <c:forEach var="product" items="${productslist}">
+													<tr>
+													<th scope="row"><%= i %> <% i++; %></th>
+													<td>${product.product_id}</td>
+													<td>${product.product_name}</td>
+													<td>${product.product_desc}</td>
+													<td>${product.product_isenabled}</td>
+													<td><a href="#" class="btn btn-primary"><i class="fa fa-pencil" aria-hidden="true"></i></a> <a href="#" class="btn btn-primary"><i class="fa fa-trash" aria-hidden="true"></i></a>
+													</td>
+													</tr>
+												</c:forEach>
+										      </tbody>
+										    </table>
+                                        </div>
+                                    </div>
+                       	</div>
+                      </div> 
+    			</div>
+    			<div class="col-lg-6">
+    				<div class="ibox">
+                    	<div class="ibox-title">
+                                    <h5>Suppliers List </h5> 
+                        </div>
+                        <div class="ibox-content">
+                                   <div>
+                                       <div class="table-responsive">
+										    <table class="table table-bordered table-hover" >
+										      <thead>
+										        <tr>
+										          <th>#</th>
+										          <th>Supplier Id</th>
+										          <th>Supplier Name</th>
+										          <th>Supplier Description</th>
+										          <th>Is Available</th>
+										          <th>Options</th>
+										        </tr>
+										      </thead>
+										      <% int j = 1; %> 
+										      <tbody>
+										       <c:forEach var="supplier" items="${supplierslist}">
+													<tr>
+													<th scope="row"><%= j %> <% j++; %></th>
+													<td>${supplier.supplier_id}</td>
+													<td>${supplier.supplier_name}</td>
+													<td>${supplier.supplier_desc}</td>
+													<td>${supplier.supplier_isenabled}</td>
+													<td><a href="#" class="btn btn-primary"><i class="fa fa-pencil" aria-hidden="true"></i></a> <a href="#" class="btn btn-primary"><i class="fa fa-trash" aria-hidden="true"></i></a>
+													</td>
+													</tr>
+												</c:forEach>
+										      </tbody>
+										    </table>
+										  </div>
+                                    </div>
+                       	</div>
+                      </div> 
+    			</div>
+    					
+    	</div>
+    	<%@ include file="admin-footernav.jsp" %>
+        </div>
+   </div>
+
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="resources/js/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="resources/js/bootstrap.min.js"></script>
+    
+    <!--  Data Table Search and Sort Plugin Javascripts -->
+	<script src="resources/js/jquery.dataTables.min.js"></script>
+    <script src="resources/js/dataTables.bootstrap.min.js"></script>
+    
+     <!-- Side Nav Menu Toggle Script -->
+    <script src="resources/js/tgjs.js"></script>
+    
+    <!--  Data Table Search and Sort Plugin Javascript -->
+   <script>
+   $('#tablesortsearch').DataTable();
+   $('#tablesortsearch2').DataTable();
+   </script>
+  </body>
+</html>

@@ -1,0 +1,242 @@
+/* @#bb0303 - RED
+@#e7eae1 - light grey
+@#72b7bc - light blue
+@#0d2233 - dark blue
+@#04050a - black */
+
+body {
+    font-family: 'open sans';
+    font-size: 12px;
+    line-height: 18px;
+    color: #04050a;
+    font-weight: 400;
+    background-color: #ffffff;
+    margin: 0;
+}
+/* Customer Navbar */
+
+.container-fluid .navbar-header {
+    margin-left: 15px;
+}
+.navbar {
+    position: relative;
+    min-height: 50px;
+    margin-bottom: 0;
+    border: 1px solid transparent;
+}
+.custom-navbar {
+    min-height: 80px;
+    background-color: #fff;
+    font-size: 14px;
+    line-height: 20px;
+    border-bottom: solid #bb0303 1px;
+    padding-top: 15px;
+}
+.navbar-default .navbar-nav>li>a:hover {
+    color: #bb0303;
+    background-color: transparent;
+}
+/* LEFT TO RIGHT Underline Animation*/
+
+.navbar-default .navbar-nav > li > a {
+    display: inline-block;
+    color: #0d2233;
+}
+.navbar-default .navbar-nav > li > a:after {
+    content: '';
+    display: block;
+    height: 2px;
+    width: 0;
+    background: transparent;
+    transition: width .5s ease, background-color .5s ease;
+}
+.navbar-default .navbar-nav > li > a:hover:after {
+    width: 100%;
+    background: #bb0303;
+}
+
+.navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:focus, .navbar-default .navbar-nav>.open>a:hover {
+	background-color: #eee;
+	padding-bottom: 25px;
+	color: #bb0303;
+	}
+	
+/* Link 1 to Link 5 Center Align */
+
+/* @media (min-width: 768px) {
+    .navbar-nav.navbar-center {
+        position: absolute;
+        left: 50%;
+        transform: translatex(-50%);
+        margin-left: -25.2px;
+    }
+} */
+
+/*  .carousel{
+    z-index: 0
+    } */
+.carousel-inner > .item > img {
+    width: 100%;
+    height: auto;
+}
+.carousel-custom {
+    padding: 0;
+    position:absolute;
+}
+
+.loginpage-banner{
+	margin-bottom: 40px;
+	padding: 0;
+}
+.loginpage-banner > img {
+	 width: 100%;
+    height: auto;
+}
+
+
+/* Login page css  */
+.page-wrapper
+{
+	margin-bottom: 40px;
+	padding: 0 40px;
+}
+.login-wrapper{
+	margin-bottom: 40px;
+}
+
+.loginpage-title{
+    text-transform: uppercase;
+    margin-bottom: 25px;
+    border-left: 2px solid #bb0303;
+    padding: 5px 10px;
+    color: #0d2233;
+    font-size: 14px;
+}
+
+.l-box
+{
+	box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
+	padding: 20px;
+	background-color: #fff;
+}
+.l-box > p > small > a {
+	color: #0d2233;
+}
+.l-box > p > small > a:hover{
+	color: #bb0303;
+	text-decoration: none;
+}
+ 
+.l-box > input[type="text"]:focus, input[type="password"]:focus {
+    border: 1px solid #bb0303;
+    outline: none;
+}
+.l-box > input[type="text"], input[type="password"] {
+    background: #fff none repeat scroll 0 0;
+    border: 1px solid transparent;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
+    color: #000000;
+    font-size: 13px;
+    height: 40px;
+    margin-bottom: 20px;
+    padding-left: 20px;
+    width: 100%;
+}
+
+.l-box > .btn-custom{
+	text-transform: uppercase;
+	font-size: 13px;
+	height: 35px;
+	padding: 0 20px;
+	background : transparent;
+	color: #bb0303;
+	border: 2px solid #bb0303;
+	border-radius: 0;
+	font-weight: 400;
+}
+.l-box > .btn-custom:hover{
+	color: #fff;
+	background-color: #bb0303;
+	
+}
+.l-box > .btn-custom:active, .l-box > .btn-custom:focus{
+	outline: 0;
+	color: #fff;
+	background-color: #bb0303;
+}
+
+.list-unstyled {
+	padding-left: 0;
+    list-style: none;
+}
+
+@media (min-width: 768px) {
+.tgdropdown-content{
+	    padding: 20px 30px;
+ }
+}
+
+@media (min-width: 768px){
+
+.nav li.dropdown .dropdown-menu {
+    width: 100%;
+    right: initial;
+    left: 0;
+}
+}
+
+
+
+/* 
+#boxshadow {
+    position: relative;
+    -moz-box-shadow: 1px 2px 4px rgba(0, 0, 0,0.5);
+    -webkit-box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
+    box-shadow: 10px 20px 10px rgba(0, 0, 0, .5);
+    padding: 1px;
+    background: white;
+}
+#boxshadow img {
+    width: 100%;
+    border: 1px solid #8a4419;
+    border-style: inset;
+}
+
+
+#boxshadow::after {
+    content: '';
+    position: absolute;
+    z-index: -1; hide shadow behind image
+    -webkit-box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);                
+    width: 70%; 
+    left: 15%; one half of the remaining 30%
+    height: 100px;
+    bottom: 0;
+}
+.zoom-effect-container {
+    float: left;
+    position: relative; 
+    width: 640px;
+    height: 360px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.image-card {
+ 
+  top: 0;
+  left: 0;
+}
+
+.image-card img {
+  -webkit-transition: 0.8s ease;
+  transition: 0.8s ease;
+}
+
+.zoom-effect-container:hover .image-card img {
+  -webkit-transform: scale(1).1);
+  transform: scale(1.1);
+}
+ */
